@@ -45,7 +45,7 @@ class LegoArray
     move_from_white_to_black(false)
   end
 
- def go_to(index)
+ def go_to(index) #3 is okay, 1 is not
    return if index < -1 and index >= @array.length
 
    steps = index - @current_array_index
