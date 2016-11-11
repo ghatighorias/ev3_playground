@@ -46,6 +46,8 @@ class LegoArray
   end
 
  def go_to(index)
+   return if index < -1 and index >= @array.length
+
    steps = index - @current_array_index
 
    if (steps < 0)

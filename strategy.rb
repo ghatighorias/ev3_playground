@@ -1,17 +1,16 @@
-require './motor'
-require './color_sensor'
+require './lego_array'
 
-motor = Motor.new
-color_sensor = ColorSensor.new
+lego_array = LegoArray.new([1, 2, 3, 4], -1)
 
-current_color = color_sensor.current_color
+lego_array.go_to(3)
 
-while current_color != 'Red'
-  motor.move_forward
-  current_color = color_sensor.current_color
-end
+lego_array.go_to(1)
 
-while current_color != 'Yellow'
-  motor.rotate_left
-  current_color = color_sensor.current_color
-end
+lego_array.go_to(-1)
+
+lego_array.go_to(2)
+
+lego_array.go_to(5)
+
+#lego_array.next_position
+#lego_array.previous_previous_position
