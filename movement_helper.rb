@@ -46,7 +46,7 @@ class MovementHelper
     return move_till_color(forward, @background_color)
   end
 
-  def safe_move_to_black(forward)
+  def safe_move_to_target(forward)
     move_unless_see_target(forward)
     steps = move_unless_see_background(forward)
     move_in_direction_times(!forward, (steps / 2))
@@ -56,7 +56,7 @@ class MovementHelper
     move_unless_see_background(forawrd)
 
     if(move_safely)
-      safe_move_to_black(forawrd)
+      safe_move_to_target(forawrd)
     else
       move_unless_see_target(forawrd)
     end
