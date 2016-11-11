@@ -4,7 +4,7 @@ require './color_sensor'
 class LegoArray
   attr_reader :motor, :color_sensor, :array
 
-  def moveFromBlackToWhite(toForward = true)
+  def move_from_black_to_white(toForward = true)
     while current_color == 'Black'
       if toForward
         motor.move_forward
@@ -15,7 +15,7 @@ class LegoArray
     end
   end
 
-  def moveFromWhiteToBlack(toForward = true)
+  def move_from_white_to_black(toForward = true)
     while current_color == 'White'
       if toForward
         motor.move_forward
@@ -33,15 +33,15 @@ class LegoArray
   end
 
   def next
-    moveFromBlackToWhite(true)
+    move_from_black_to_white(true)
 
-    moveFromWhiteToBlack(true)
+    move_from_white_to_black(true)
   end
 
   def previous
-    moveFromBlackToWhite(false)
+    move_from_black_to_white(false)
 
-    moveFromWhiteToBlack(false)
+    move_from_white_to_black(false)
   end
 
 end
