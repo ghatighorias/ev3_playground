@@ -26,6 +26,16 @@ class LegoArray
       end
       current_color = color_sensor.current_color
     end
+
+    if toForward
+      motor.move_forward
+      motor.move_forward
+      motor.move_forward
+    else
+      motor.move_backward
+      motor.move_backward
+      motor.move_backward
+    end
   end
 
   def initialize(array, starting_position) #{-1 .. 4}
