@@ -6,7 +6,7 @@ class LegoArray
 
   def move_from_black_to_white(toForward = true)
     current_color = color_sensor.current_color
-    while current_color == 'Black'
+    while current_color != 'White'
       if toForward
         motor.move_forward
       else
@@ -18,7 +18,7 @@ class LegoArray
 
   def move_from_white_to_black(toForward = true)
     current_color = color_sensor.current_color
-    while current_color == 'White'
+    while current_color != 'Black'
       if toForward
         motor.move_forward
       else
@@ -32,6 +32,7 @@ class LegoArray
     @motor = Motor.new
     @color_sensor = ColorSensor.new
     @array = array
+
   end
 
   def next
@@ -45,5 +46,6 @@ class LegoArray
 
     move_from_white_to_black(false)
   end
+
 
 end
