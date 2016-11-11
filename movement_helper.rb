@@ -57,6 +57,7 @@ class MovementHelper
       safe_move_to_black(true)
     else
       move_from_white_to_black(true)
+    end
   end
 
   def previous_position(move_safely)
@@ -66,6 +67,7 @@ class MovementHelper
       safe_move_to_black(false)
     else
       move_from_white_to_black(false)
+    end
   end
 
   def change_position_in_direction(direction_is_forward, change_time, move_safely)
