@@ -24,24 +24,28 @@ class MovementHelper
   end
 
   def move_from_black_to_white(forward)
-    current_color = color_sensor.current_color
     steps = 0;
+    current_color = color_sensor.current_color
+
     while current_color != 'White'
       move_in_direction(forward)
       steps++
       current_color = color_sensor.current_color
     end
+
     return steps;
   end
 
   def move_from_white_to_black(forward)
-    current_color = color_sensor.current_color
     steps = 0;
+    current_color = color_sensor.current_color
+
     while current_color != 'Black'
       move_in_direction(forward)
       steps++
       current_color = color_sensor.current_color
     end
+
     return steps
   end
 
