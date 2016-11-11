@@ -7,7 +7,9 @@ class LegoArray
 
   def initialize(array, starting_position)
     @array = array
-    @movement_helper = MovementHelper.new
+    @background_color = 'White'
+    @target_color = 'Black'
+    @movement_helper = MovementHelper.new(@background_color, @target_color)
     @current_array_index = starting_position
   end
 
